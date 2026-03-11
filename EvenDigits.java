@@ -20,13 +20,16 @@ public class EvenDigits {
     }
 
     static int Digits2(int num){
+        if(num < 0){
+            num = num * -1;
+        }
         return (int)(Math.log10(num)+1);
     }
 
     // static int Digits(int num) {
-    //     if(num < 0){
-    //         num = num * -1;
-    //     }
+        // if(num < 0){
+        //     num = num * -1;
+        // }
     //     if(num == 0){
     //         return 1;
     //     }
