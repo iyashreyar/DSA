@@ -7,8 +7,14 @@ public class Ceiling{
 
     // Return the index of smallest number >= target
     static int ceiling(int[] arr, int target){
+        
         int s = 0;
         int e = arr.length-1;
+
+        //If the target element is greater than largest number in array
+        if (target > arr[arr.length-1]){
+            return -1;
+        }
         if (arr.length == 0){
             return -1;
         }
