@@ -5,6 +5,9 @@ public class MaxInArray {
         System.out.println(Max);
     }
     static int max(int[] nums){
+        if(nums == null){
+            return -1;
+        }
         int Max = nums[0];
         for (int i = 1; i < nums.length; i++) {
             if(Max < nums[i]){
@@ -14,6 +17,12 @@ public class MaxInArray {
         return Max;
     }
     static int maxRange(int[] nums, int start, int end){
+        if(nums.length == 0){
+            return -1;
+        }
+        if (end < start){
+            return -1;
+        }
         int Max = nums[start];
         for (int i = start+1; i <= end; i++) {
             if(Max < nums[i]){

@@ -1,3 +1,5 @@
+// QUE: Find total number of occurences of a digit in a number 
+
 public class CountNums {
     public static void main(String[] args) {
         int count = 0;
