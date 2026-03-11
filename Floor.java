@@ -9,6 +9,11 @@ public class Floor {
     static int floor(int[] arr, int target) {
         int s = 0;
         int e = arr.length-1;
+
+        //If the target element is smaller than smallest number in array
+        if (target > arr[arr.length-1]){
+            return -1;
+        }
         if (arr.length == 0){
             return -1;
         }
