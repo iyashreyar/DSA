@@ -7,11 +7,14 @@ public class RotatedBinarySearch {
         System.out.println(search(arr, target));
     }
     static int search(int[] nums, int target) {
-        int peak = findPivot(nums);
-        if (BS(nums, target, 0, peak) != -1){
-            return BS(nums, target, 0, peak);
+        int pivot = findPivot(nums);
+        if(pivot == -1){
+            BS(nums, target, 0, nums.length-1);
         }
-        return BS(nums, target, peak+1, nums.length-1);
+        if (BS(nums, target, 0, pivot) != -1){
+            return BS(nums, target, 0, pivot);
+        }
+        return BS(nums, target, pivot+1, nums.length-1);
     }
     static int findPivot(int[] arr){
         int s = 0;
