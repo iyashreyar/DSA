@@ -9,13 +9,13 @@ public class BinarySearch {
         int e = arr.length-1;
 
         while(s <= e){
-            int m = s + (e - s) / 1;
-            if(target == arr[m]){
-                return m;
-            } else if (target > arr[m]){
+            int m = s + (e - s) / 2;
+            if(target > arr[m]){
                 s = m+1;
-            } else{
+            } else if (target < arr[m]){
                 e = m-1;
+            } else{
+                return m;
             }
         }
         return -1;
