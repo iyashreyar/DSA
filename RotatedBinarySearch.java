@@ -16,6 +16,8 @@ public class RotatedBinarySearch {
         }
         return BS(nums, target, pivot+1, nums.length-1);
     }
+
+    // It doesn't work wiith array of duplicate values
     static int findPivot(int[] arr){
         int s = 0;
         int e = arr.length-1;
