@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] arr = {5,3,7,6,1,4,2};
+        int[] arr = {4,62,43,56,9};
         selection(arr);
         System.out.println(Arrays.toString(arr));
     }
